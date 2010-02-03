@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{sortable-model}
-  s.version = "0.0.2"
+  s.version = "0.0.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["EdgeCase LLC"]
@@ -27,6 +27,7 @@ scopes that allows the values to come directly from params without the risk of a
      "Rakefile",
      "VERSION",
      "lib/sortable-model.rb",
+     "sortable-model.gemspec",
      "spec/sortable-model_spec.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb"
