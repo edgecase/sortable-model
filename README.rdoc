@@ -1,6 +1,8 @@
 = sortable-model
 
-Description goes here.
+Sortable-model provides a DSL for creating named scopes that order the object in question based
+on its own attributes or those of its associations. It also provides a method for calling those
+scopes that allows the values to come directly from params without the risk of arbitrary code execution.
 
 == Note on Patches/Pull Requests
  
@@ -14,4 +16,4 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2010 Jon Distad. See LICENSE for details.
+Copyright (c) 2010 EdgeCase LLC. See LICENSE for details.
