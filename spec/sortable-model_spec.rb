@@ -1,8 +1,8 @@
-require File.dirname(__FILE__) + '/../spec_helper'
+require File.join(File.dirname(__FILE__), 'spec_helper')
 
 describe SortableModel do
   before do
-    @model_class = Class.new(ActiveRecord::Base).acts_as_sortable
+    @model_class = Class.new(ActiveRecord::Base).sortable_model
     @model_class.stub! :reflect_on_association => mock('assoc', :quoted_table_name => '`assoc_table`'),
                        :quoted_table_name => '`model_classes`'
   end
