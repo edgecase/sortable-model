@@ -4,6 +4,31 @@ Sortable-model provides a DSL for creating named scopes that order the object in
 on its own attributes or those of its associations. It also provides a method for calling those
 scopes that allows the values to come directly from params without the risk of arbitrary code execution.
 
+Examples:
+
+# Schema:
+# Student: id (primary key), name (string), :major (string)
+# Papers: id (primary key), student_id (int), title (string), grade (int)
+
+class Student < ActiveRecord::Base
+  
+  has_many :papers
+
+  sortable_model
+
+  can_sort_by :name 
+    #=> student.sorted_by(:name) is students ordered by name DESC
+    #=> student.sorted_by(:name, true) is students ordered by name ASC
+  can_sort_by :grades, :papers => :grade
+    #=> student.sorted_by(:grades) is student ordered by the grades of her papers
+  can_sort_by :something_complicated, lambda { |stdnt|
+    # some code that returns an order hash
+  }
+    #=> This one is really just a named scope that can use the sorted_by sanitizing method
+end
+
+The #sorted_by method takes either strings or symbols for the name of the sorter.
+
 == Note on Patches/Pull Requests
  
 * Fork the project.
