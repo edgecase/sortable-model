@@ -20,7 +20,7 @@ class Student < ActiveRecord::Base
     #=> student.sorted_by(:name) is students ordered by name DESC
     #=> student.sorted_by(:name, true) is students ordered by name ASC
   can_sort_by :grades, :papers => :grade
-    #=> student.sorted_by(:grades) is student ordered by the grades of her papers
+    #=> student.sorted_by(:grades) is student ordered by the grades of her papers DESC
   can_sort_by :something_complicated, lambda { |stdnt|
     # some code that returns an order hash
   }
