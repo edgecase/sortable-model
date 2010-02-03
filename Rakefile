@@ -5,11 +5,15 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "sortable-model"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
-    gem.email = "jon@theedgecase.com"
+    gem.summary = "DSL for generating ordering named-scopes for ActiveRecord models"
+    gem.description = <<EOS
+Sortable-model provides a DSL for creating named scopes that order the object in question based
+on its own attributes or those of its associations. It also provides a method for calling those
+scopes that allows the values to come directly from params without the risk of arbitrary code execution.
+EOS
+    gem.email = "github@edgecase.com"
     gem.homepage = "http://github.com/edgecase/sortable-model"
-    gem.authors = ["Jon Distad"]
+    gem.authors = ["EdgeCase LLC"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
