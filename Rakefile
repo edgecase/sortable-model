@@ -13,7 +13,7 @@ scopes that allows the values to come directly from params without the risk of a
 EOS
     gem.email = "github@edgecase.com"
     gem.homepage = "http://github.com/edgecase/sortable-model"
-    gem.authors = ["EdgeCase LLC"]
+    gem.authors = ["Jon Distad", "Ehren Murdick"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
