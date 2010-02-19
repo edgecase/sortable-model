@@ -5,10 +5,10 @@
 
 Gem::Specification.new do |s|
   s.name = %q{sortable-model}
-  s.version = "0.0.4"
+  s.version = "0.0.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["EdgeCase LLC"]
+  s.authors = ["Jon Distad", "Ehren Murdick"]
   s.date = %q{2010-02-19}
   s.description = %q{Sortable-model provides a DSL for creating named scopes that order the object in question based
 on its own attributes or those of its associations. It also provides a method for calling those
